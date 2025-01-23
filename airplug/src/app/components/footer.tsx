@@ -14,7 +14,7 @@ export default function Footer() {
     }
     return (
         <>
-            <footer className="lg:min-h-[300px] w-full lg:mt-5 p-8 min-h-[550px] bg-[#e8e8e8] lg:bg-transparent md:px-20 pb-20 shadow-lg rounded-lg border border-top-2">
+            <footer className="lg:min-h-[300px] w-full lg:mt-5 p-8 min-h-[550px] bg-gray-50 lg:bg-transparent md:px-20 pb-20 shadow-lg rounded-lg border border-top-2">
                 <div className="lg:max-w-5xl lg:h-[350px] h-[500px] mx-auto">
                     <div className="lg:flex justify-between lg:p-10">
                         <div className="lg:flex lg:flex-col gap-4">
@@ -49,7 +49,7 @@ export default function Footer() {
                     </div>
                     <div className='lg:p-10 mt-20 lg:mt-0 lg:flex-row lg:justify-between lg:items-center flex flex-col gap-2'>
                         <div>
-                            <p className='text-sm text-gray-600'>Gambit &copy; 2025</p>
+                            <p className='text-sm text-gray-600'>AirPlug &copy; 2025</p>
                         </div>
                         <div className='lg:flex-row lg:justify-between lg:gap-3 flex flex-col gap-2'>
                             <Link href='#'>
