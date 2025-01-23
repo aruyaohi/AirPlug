@@ -12,6 +12,7 @@
     "@headlessui/react": "^2.2.0",
     "@reown/appkit": "^1.6.5",
     "@reown/appkit-adapter-solana": "^1.6.5",
+    "@reown/appkit-wallet-button": "^1.6.5",
     "@solana/wallet-adapter-wallets": "^0.19.32",
     "dotenv": "^16.4.7",
     "framer-motion": "^11.9.0",

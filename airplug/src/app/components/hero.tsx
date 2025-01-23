@@ -1,12 +1,11 @@
 'use client';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-import { useRouter } from 'next/navigation'; // Correct import for the app directory
+import { useRouter } from 'next/navigation'; 
 
 export default function Hero() {
-  // State to track loading
-  const [loading, setLoading] = useState<boolean>(false); // Specify type for state
-  const router = useRouter(); // Router instance from next/navigation
+  const [loading, setLoading] = useState<boolean>(false); 
+  const router = useRouter(); 
 
   // Navigation handler with type annotation
   const handleNavigation = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
