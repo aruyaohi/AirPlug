@@ -7,7 +7,7 @@ export default function Header() {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
-    <header className="transition-all bg-white text-gray-900 sticky top-0 z-50 border border-b-2">
+    <header className="transition-all bg-white text-gray-900 sticky top-0 z-50">
       <div className="max-w-screen-xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo */}
         <h1 className="font-bold text-3xl tracking-wide">
