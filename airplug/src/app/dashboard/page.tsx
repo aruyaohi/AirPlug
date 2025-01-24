@@ -1,75 +1,63 @@
 'use client'
 import { useState } from "react";
 import Image from "next/image";
-import { FaBars } from "react-icons/fa";  // For the hamburger icon
+import { FaCopy } from "react-icons/fa6";
 
-// Dummy data for network logos
-const networks = [
-  { name: "GLO", logo: "/images/glo-logo.png" },
-  { name: "MTN", logo: "/images/mtn-logo.png" },
-  { name: "AIRTEL", logo: "/images/airtel-logo.png" },
-  { name: "9MOBILE", logo: "/images/9mobile-logo.png" },
-];
+
 
 export default function Dashboard() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div className="min-h-screen flex flex-col bg-gray-50">
+    <div className="min-h-screen flex flex-col bg-white">
       {/* Navbar */}
       <nav className="flex items-center justify-between p-4 bg-white shadow-md">
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 border border-5 px-2 py-2 border-[#f1952c] bg-[#f1952c] rounded-3xl">
           {/* Profile Picture and Wallet Address */}
           <Image
-            src="/images/pfp.png"
+            src="/images/pfp.jpeg"
             alt="Profile"
             width={40}
             height={40}
             className="rounded-full"
           />
-          <p className="text-sm font-medium text-gray-700">0x123...abc</p>
+          <p className="text-sm font-medium text-black">0x123...abc</p>
+          <button>
+          <FaCopy className="text-[#f1952c]"/>
+          </button>
         </div>
         {/* Menu Button */}
-        <button
+       <button
+          className="lg:hidden p-2 border-2 border-[#f1952c] rounded-md focus:outline-none transition-transform"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="lg:hidden text-gray-700"
         >
-          <FaBars size={24} />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-6 w-6 text-[#f1952c]"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth="2"
+          >
+            {!isMenuOpen ? (
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            ) : (
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            )}
+          </svg>
         </button>
       </nav>
 
-      {/* Main Content */}
-      <div className="flex-grow p-4 lg:p-8">
         {/* Wallet Balance Section */}
-        <div className="bg-white p-6 rounded-lg shadow-md mb-8">
-          <h2 className="text-2xl font-semibold text-gray-800">Wallet Balance</h2>
-          <p className="mt-2 text-xl text-gray-600">$100.00</p>
-          <button className="mt-4 w-full py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all">
-            Fund Wallet
-          </button>
-        </div>
-
-        {/* Network Selection Section */}
-        <div className="bg-white p-6 rounded-lg shadow-md">
-          <h2 className="text-2xl font-semibold text-gray-800">Select Network</h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 mt-4">
-            {networks.map((network) => (
-              <div key={network.name} className="flex items-center gap-4 cursor-pointer">
-                <Image
-                  src={network.logo}
-                  alt={network.name}
-                  width={30}
-                  height={30}
-                  className="object-contain"
-                />
-                <p className="text-lg text-gray-700">{network.name}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Mobile Menu (for smaller screens) */}
+            {/* Mobile Menu (for smaller screens) */}
       {isMenuOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 z-10 lg:hidden">
           <div className="bg-white p-4 w-64 absolute top-0 right-0 h-full">

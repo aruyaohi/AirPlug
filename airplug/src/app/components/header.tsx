@@ -11,18 +11,18 @@ export default function Header() {
       <div className="max-w-screen-xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo */}
         <h1 className="font-bold text-3xl tracking-wide">
-          <span className="text-[#2c76d1]">AIR</span>PLUG
+          <span className="text-[#f1952c]">AIR</span>PLUG
         </h1>
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex space-x-8 text-lg">
-          <a href="#" className="hover:text-[#2c76d1] transition-colors">
+          <a href="#" className="hover:text-[#f1952c] transition-colors">
             About
           </a>
-          <a href="#" className="hover:text-[#2c76d1] transition-colors">
+          <a href="#" className="hover:text-[#f1952c] transition-colors">
             How to Buy?
           </a>
-          <a href="#" className="hover:text-[#2c76d1] transition-colors">
+          <a href="#" className="hover:text-[#f1952c] transition-colors">
             Contact
           </a>
         </nav>

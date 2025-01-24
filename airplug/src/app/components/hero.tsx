@@ -1,6 +1,7 @@
 'use client';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import Image from 'next/image';
 import { useRouter } from 'next/navigation'; 
 
 export default function Hero() {
@@ -19,7 +20,7 @@ export default function Hero() {
       {/* Loader */}
       {loading && (
         <div className="fixed inset-0 flex items-center justify-center bg-white bg-opacity-80 z-50">
-          <div className="loader border-t-4 border-blue-500 rounded-full w-16 h-16 animate-spin"></div>
+          <div className="loader border-t-4 border-[#f1952c] rounded-full w-16 h-16 animate-spin"></div>
         </div>
       )}
 
@@ -36,7 +37,7 @@ export default function Hero() {
             <h1 className="text-4xl lg:text-5xl font-bold font-raleway leading-tight tracking-tight">
               Seamlessly Buy Airtime & Data
               <br />
-              <span className="text-[#2c76d1]">Using Crypto</span>
+              <span className="text-[#737373]">Using Crypto</span>
             </h1>
 
             {/* Subtext */}
@@ -64,10 +65,12 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="lg:w-1/2 mt-10 lg:mt-0"
           >
-            <img
+            <Image
               src="/images/net.png"
               alt="Crypto Airtime and Data Top-Up"
               className="md:full rounded-xl"
+              width={100}
+              height={100}
             />
           </motion.div>
         </div>

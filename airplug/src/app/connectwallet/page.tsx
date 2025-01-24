@@ -9,6 +9,7 @@ import { PhantomWalletAdapter, SolflareWalletAdapter } from '@solana/wallet-adap
 import { useAppKit, useAppKitAccount } from "@reown/appkit/react";
 import { useEffect } from "react";
 import { useRouter } from 'next/navigation';
+import { FaWallet } from "react-icons/fa6";
 
 // Set up Solana Adapter
 const solanaWeb3JsAdapter = new SolanaAdapter({
@@ -67,14 +68,15 @@ export default function ConnectWallet() {
   }, [isConnected]);
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-100 via-white to-purple-50">
-      <div className="max-w-3xl w-full border border-gray-200 shadow-lg rounded-xl bg-white p-6 sm:p-10 lg:p-12 text-center">
+    <div className="min-h-screen flex w-full justify-center">
+      <div className="max-w-3xl w-full shadow-lg rounded-xl bg-white p-6 sm:p-10 lg:p-12 text-center h-screen justify-center flex flex-col items-stretch">
         {/* Logo or Image */}
+       <div className="h-2/3 flex flex-col justify-end pb-12">
         <Image
           src="/images/wallet2.png"
           alt="Wallet Illustration"
-          width={120}
-          height={120}
+          width={200}
+          height={200}
           className="mx-auto mb-6 rounded-full shadow-lg"
         />
 
@@ -85,13 +87,16 @@ export default function ConnectWallet() {
         <p className="mt-4 text-sm sm:text-lg text-gray-600">
           Securely connect your wallet to access all features and explore a seamless experience.
         </p>
+        </div>
 
         {/* Buttons */}
-        <div className="mt-8">
+        <div className="h-1/3 flex flex-col justify-end">
+        <div className="mt-8 w-full">
           <button
             onClick={() => open()}
-            className="py-3 px-10 sm:px-14 font-medium text-white bg-gradient-to-r from-blue-500 to-purple-400 rounded-lg shadow-md hover:shadow-lg transform hover:scale-105 transition-transform duration-300"
+            className="flex justify-center gap-4 items-center py-3 w-full sm:px-14 font-medium text-white bg-[#f1952c] rounded-lg shadow-md hover:shadow-lg transform hover:scale-105 transition-transform duration-300"
           >
+            <FaWallet size={20}/>
             Connect Wallet
           </button>
         </div>
@@ -99,10 +104,11 @@ export default function ConnectWallet() {
         {/* Additional Info */}
         <p className="mt-8 text-sm text-gray-500">
           Need help?{' '}
-          <a href="/help" className="text-blue-600 hover:underline">
+          <a href="/help" className="text-[#f1952c] hover:underline">
             Visit our Help Center
           </a>
         </p>
+      </div>
       </div>
 
       {/* Custom Animation */}
