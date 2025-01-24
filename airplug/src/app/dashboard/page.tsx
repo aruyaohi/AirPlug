@@ -11,7 +11,7 @@ export default function Dashboard() {
     <div className="min-h-screen flex flex-col bg-white">
       {/* Navbar */}
       <nav className="flex items-center justify-between p-4 bg-white shadow-md">
-        <div className="flex items-center gap-3 border px-2 py-2 rounded-3xl border-gray-900">
+        <div className="flex items-center gap-3 border px-2 py-2 rounded-3xl">
           {/* Profile Picture and Wallet Address */}
           <Image
             src="/images/pfp.jpeg"
@@ -27,12 +27,12 @@ export default function Dashboard() {
         </div>
         {/* Menu Button */}
         <button
-          className="lg:hidden p-2 border-2 border-gray-900 rounded-md focus:outline-none transition-transform"
+          className="lg:hidden p-2 border-2 border-gray-500 rounded-md focus:outline-none transition-transform"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6 text-gray-900"
+            className="h-6 w-6 text-gray-500"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -89,16 +89,16 @@ export default function Dashboard() {
           <div>
             <label className="block text-sm font-semibold text-gray-700">Network Providers</label>
             <div className="flex justify-between items-center gap-3">
-              <button className="flex-1 py-3 border-2 border-[#f1952c] rounded-md hover:bg-[#3de25e] transition-all duration-300 flex items-center justify-center">
+              <button className="flex-1 py-3 border-2 border-[#f1952c] rounded-md hover:bg-[#3de25e] hover:border-none transition-all duration-300 flex items-center justify-center">
                 <Image src="/images/glo.png" alt="GLO" width={40} height={40} />
               </button>
-              <button className="flex-1 py-3 border-2 border-gray-300 rounded-md hover:bg-yellow-500 transition-all duration-300 flex items-center justify-center">
+              <button className="flex-1 py-3 border-2 border-gray-300 rounded-md hover:bg-yellow-500 hover:border-none  transition-all duration-300 flex items-center justify-center">
                 <Image src="/images/mtn.png" alt="MTN" width={40} height={40} />
               </button>
-              <button className="flex-1 py-3 border-2 border-gray-300 rounded-md hover:bg-red-500 transition-all duration-300 flex items-center justify-center">
+              <button className="flex-1 py-3 border-2 border-gray-300 rounded-md hover:bg-red-500 hover:border-none transition-all duration-300 flex items-center justify-center">
                 <Image src="/images/airtel.jpeg" alt="Airtel" width={40} height={40} />
               </button>
-              <button className="flex-1 py-3 border-2 border-gray-300 rounded-md hover:bg-[#6ba129] transition-all duration-300 flex items-center justify-center">
+              <button className="flex-1 py-3 border-2 border-gray-300 rounded-md hover:bg-[#6ba129] hover:border-none transition-all duration-300 flex items-center justify-center">
                 <Image src="/images/9mob.jpeg" alt="9Mobile" width={40} height={40} />
               </button>
             </div>
@@ -190,7 +190,7 @@ export default function Dashboard() {
 
       {/* Proceed Button */}
       <div className="p-6">
-        <button className="w-full bg-[#f1952c] text-white py-3 rounded-md font-semibold">
+        <button className="w-full bg-[#030303] text-white py-3 rounded-md font-semibold">
           Proceed
         </button>
       </div>
