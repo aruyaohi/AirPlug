@@ -21,9 +21,9 @@ export default function Dashboard() {
             height={40}
             className="rounded-full"
           />
-          <p className="text-sm font-medium text-black">0x123...abc</p>
+          <p className="text-sm font-medium text-white">0x123...abc</p>
           <button>
-          <FaCopy className="text-[#f1952c]"/>
+          <FaCopy className="text-white"/>
           </button>
         </div>
         {/* Menu Button */}
@@ -55,6 +55,15 @@ export default function Dashboard() {
           </svg>
         </button>
       </nav>
+
+      <div className="w-full border-2 rounded-md p-4 border-gray-50 flex justify-center">
+        <button className="border bg-[#f1952c] rounded-full w-1/2 py-3 flex items-center justify-center text-white font-semibold">
+            Airtime
+        </button>
+        <button className="border bg-white rounded-full w-1/2 py-3 flex items-center justify-center font-semibold">
+            Data
+        </button>
+      </div>
 
         {/* Wallet Balance Section */}
             {/* Mobile Menu (for smaller screens) */}

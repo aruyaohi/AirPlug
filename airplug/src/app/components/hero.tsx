@@ -20,7 +20,7 @@ export default function Hero() {
       {/* Loader */}
       {loading && (
         <div className="fixed inset-0 flex items-center justify-center bg-white bg-opacity-80 z-50">
-          <div className="loader border-t-4 border-[#f1952c] rounded-full w-16 h-16 animate-spin"></div>
+          <div className="loader border-t-4 border-[#f1952c] rounded-lg w-16 h-16 animate-spin"></div>
         </div>
       )}
 
@@ -51,7 +51,7 @@ export default function Hero() {
               <a
                 href="/connectwallet"
                 onClick={(e) => handleNavigation(e, '/connectwallet')}
-                className="py-4 px-10 lg:px-16 text-lg font-semibold text-gray-900 bg-white border  border-3 border-gray-900 rounded-lg backdrop-blur-md bg-opacity-70 hover:text-[#2c76d1] hover:border hover:border-blue-500 transition-all duration-300 transform hover:scale-105"
+                className="py-4 px-10 lg:px-16 text-lg font-semibold text-gray-900 bg-white border  border-3 border-gray-900 rounded-lg backdrop-blur-md bg-opacity-70 hover:text-[#f1952c] hover:border hover:border-[#f1952c] transition-all duration-300 transform hover:scale-105"
               >
                 Get Started
               </a>
