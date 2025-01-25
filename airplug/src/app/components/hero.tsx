@@ -20,10 +20,7 @@ export default function Hero() {
       {/* Loader */}
       {loading && (
         <div className="fixed inset-0 flex items-center justify-center bg-white bg-opacity-80 z-50">
-          <span className="loading loading-ring loading-xs text-[#f1952c]"></span>
-          <span className="loading loading-ring loading-sm text-[#f1952c]"></span>
-          <span className="loading loading-ring loading-md text-[#f1952c]"></span>
-          <span className="loading loading-ring loading-lg text-[#f1952c]"></span>
+         <span className="loading loading-dots loading-lg text-[#1e1e1e]"></span>
         </div>
       )}
 
