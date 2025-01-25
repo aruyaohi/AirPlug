@@ -5,7 +5,8 @@ import { FaCopy } from "react-icons/fa6";
 
 export default function Dashboard() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeTab, setActiveTab] = useState("airtime");
+  const [activeTab, setActiveTab] = useState("data");
+  const [walletConnected, setWalletConnected] = useState(true);
 
   return (
     <div className="min-h-screen flex flex-col bg-white">
@@ -27,23 +28,14 @@ export default function Dashboard() {
         </div>
         {/* Menu Button */}
         <button
-          className="lg:hidden p-2 border-2 border-gray-300 rounded-md focus:outline-none transition-transform"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          className="p-3 text-[#1e1e1e] bg-white border-2 border-gray-200 rounded-md focus:outline-none transition-transformn font-medium"
+          onClick={() => setWalletConnected(!walletConnected)}
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6 text-gray-300"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth="2"
-          >
-            {!isMenuOpen ? (
-              <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-            ) : (
-              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-            )}
-          </svg>
+          {walletConnected ? (
+            <span>Disconnect</span>
+          ) : (
+            <span>Connect</span>
+          )}
         </button>
       </nav>
 
@@ -51,7 +43,7 @@ export default function Dashboard() {
       <div className="w-full border-2 rounded-md p-4 border-gray-50 flex justify-center gap-3">
         <button
           className={`border rounded-full w-1/2 py-3 flex items-center justify-center font-semibold ${
-            activeTab === "airtime" ? "bg-[#1e1e1e] text-white" : "bg-white border-gray-300"
+            activeTab === "airtime" ? "bg-[#383838] text-white" : "bg-white border-gray-300"
           }`}
           onClick={() => setActiveTab("airtime")}
         >
@@ -59,7 +51,7 @@ export default function Dashboard() {
         </button>
         <button
           className={`border rounded-full w-1/2 py-3 flex items-center justify-center font-semibold ${
-            activeTab === "data" ? "bg-[#1e1e1e] text-white" : "bg-white border-gray-300"
+            activeTab === "data" ? "bg-[#383838] text-white" : "bg-white border-gray-300"
           }`}
           onClick={() => setActiveTab("data")}
         >
@@ -184,13 +176,19 @@ export default function Dashboard() {
           id="token"
           className="w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-[#f1952c] focus:border-[#f1952c] bg-white"
         >
-          <option value="usdc">USDC</option>
+          <option value="usdc">
+            
+           <div className="flex justify-between items-center">
+            <Image src={'/images/usdc.png'} width={40} height={40} alt="usdc"/> 
+            <h4>USDC</h4>
+           </div>
+           </option>
         </select>
       </div>
 
       {/* Proceed Button */}
       <div className="p-6">
-        <button className="w-full bg-[#1e1e1e] text-white py-3 rounded-md font-semibold">
+        <button className="w-full bg-[#383838] text-white py-3 rounded-md font-semibold">
           Proceed
         </button>
       </div>
