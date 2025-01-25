@@ -27,7 +27,7 @@ export default function Header() {
   return (
     <header
       className={`fixed z-50 w-full transition-all ${
-        isScrolled ? 'bg-white shadow-sm' : 'bg-transparent'
+        isScrolled ? 'bg-white' : 'bg-transparent'
       }`}
     >
       <div className="max-w-screen-xl mx-auto px-6 py-4 flex justify-between items-center">
@@ -81,7 +81,7 @@ export default function Header() {
 
       {/* Mobile Navigation */}
       <div
-        className={`lg:hidden bg-[#ededed] text-gray-900 space-y-4 py-2 px-16 border transition-all duration-300 mt-[-45px] ${
+        className={`lg:hidden bg-transparent text-gray-900 space-y-4 py-2 px-16 transition-all duration-300 mt-[-45px] ${
           isMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
         }`}
         style={{ overflow: 'hidden' }}

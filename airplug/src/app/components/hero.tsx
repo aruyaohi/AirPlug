@@ -16,7 +16,7 @@ export default function Hero() {
   };
 
   return (
-    <section className=" mt-40 lg:mt-0 py-12 lg:py-40">
+    <section className=" mt-52 lg:mt-0 py-12 lg:py-40">
       {/* Loader */}
       {loading && (
         <div className="fixed inset-0 flex items-center justify-center bg-white bg-opacity-80 z-50">
