@@ -33,7 +33,7 @@ export default function Footer() {
                                     placeholder="Your email"
                                     className="text-sm font-light px-3 lg:px-6 py-2 rounded-md w-2/3 bg-gray-100"
                                 />
-                                <button onClick={handleSubscription} className="border-2 border-gray-900 rounded-md font-light bg-[#fff] text-[#1e1e1e] px-4 py-2 hover:bg-[#f1952c] text-sm w-1/3">
+                                <button onClick={handleSubscription} className="border-2 border-gray-900 rounded-md font-light bg-[#fff] text-[#1e1e1e] px-4 py-2 hover:bg-[#1e1e1e] hover:text-white text-sm w-1/3">
                                     Submit
                                 </button>
                             </div>

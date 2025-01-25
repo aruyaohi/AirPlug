@@ -177,11 +177,7 @@ export default function Dashboard() {
           className="w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-[#f1952c] focus:border-[#f1952c] bg-white"
         >
           <option value="usdc">
-            
-           <div className="flex justify-between items-center">
-            <Image src={'/images/usdc.png'} width={40} height={40} alt="usdc"/> 
-            <h4>USDC</h4>
-           </div>
+          USDC
            </option>
         </select>
       </div>

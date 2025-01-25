@@ -1,6 +1,5 @@
 'use client';
 import { useState, useEffect } from 'react';
-import Image from 'next/image';
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -27,13 +26,15 @@ export default function Header() {
   return (
     <header
       className={`fixed z-50 w-full transition-all ${
-        isScrolled ? 'bg-white' : 'bg-transparent'
+        isScrolled ? 'bg-white shadow-lg' : 'bg-transparent'
       }`}
     >
-      <div className="max-w-screen-xl mx-auto px-6 py-4 flex justify-between items-center">
+      <div className="max-w-screen-xl mx-auto px-6 py-6 flex justify-between items-center">
         {/* Logo */}
-        <div className="flex justify-around lg:mr-0">
-          <Image src={'/images/air.png'} width={150} height={150} alt="Logo" />
+        <div>
+          <h3 className="font-semibold text-[#383838] text-2xl">
+            Air<span className="text-[#f1952c]">Plug</span>
+          </h3>
         </div>
 
         {/* Desktop Navigation */}
@@ -81,20 +82,48 @@ export default function Header() {
 
       {/* Mobile Navigation */}
       <div
-        className={`lg:hidden bg-transparent text-gray-900 space-y-4 py-2 px-16 transition-all duration-300 mt-[-45px] ${
-          isMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
+        className={`fixed inset-0 bg-black bg-opacity-50 transition-opacity ${
+          isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
         }`}
-        style={{ overflow: 'hidden' }}
+        onClick={toggleMenu}
+      ></div>
+      <div
+        className={`fixed top-0 right-0 h-screen w-2/3 bg-white shadow-lg transform transition-transform ${
+          isMenuOpen ? 'translate-x-0' : 'translate-x-full'
+        }`}
       >
-        <a href="#" className="block text-md hover:text-[#2c76d1] transition-colors">
-          About
-        </a>
-        <a href="#" className="block text-md hover:text-[#2c76d1] transition-colors">
-          How to Buy?
-        </a>
-        <a href="#" className="block text-md hover:text-[#2c76d1] transition-colors">
-          Contact
-        </a>
+        <div className="p-6">
+          <button
+            className="text-gray-900 text-lg focus:outline-none"
+            onClick={toggleMenu}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth="2"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
+        <nav className="flex flex-col items-center space-y-6 mt-12 text-lg">
+          <a href="#" className="hover:text-[#f1952c] transition-colors">
+            About
+          </a>
+          <a href="#" className="hover:text-[#f1952c] transition-colors">
+            How to Buy?
+          </a>
+          <a href="#" className="hover:text-[#f1952c] transition-colors">
+            Contact
+          </a>
+        </nav>
       </div>
     </header>
   );
