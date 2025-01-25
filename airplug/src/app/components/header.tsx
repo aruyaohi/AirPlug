@@ -1,18 +1,40 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 export default function Header() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
-    <header className="transition-all bg-white text-gray-900 sticky top-0 z-50">
+    <header
+      className={`fixed z-50 w-full transition-all ${
+        isScrolled ? 'bg-white shadow-sm' : 'bg-transparent'
+      }`}
+    >
       <div className="max-w-screen-xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo */}
-        <h1 className="font-bold text-3xl tracking-wide">
-          <span className="text-[#f1952c]">AIR</span>PLUG
-        </h1>
+        <div className="flex justify-around lg:mr-0">
+          <Image src={'/images/air.png'} width={150} height={150} alt="Logo" />
+        </div>
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex space-x-8 text-lg">
@@ -59,18 +81,18 @@ export default function Header() {
 
       {/* Mobile Navigation */}
       <div
-        className={`lg:hidden bg-[#fff] text-gray-900 space-y-4 py-2 px-8  transition-all duration-300 ${
+        className={`lg:hidden bg-[#ededed] text-gray-900 space-y-4 py-2 px-16 border transition-all duration-300 mt-[-45px] ${
           isMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
         }`}
         style={{ overflow: 'hidden' }}
       >
-        <a href="#" className="block text-lg hover:text-[#2c76d1] transition-colors">
+        <a href="#" className="block text-md hover:text-[#2c76d1] transition-colors">
           About
         </a>
-        <a href="#" className="block text-lg hover:text-[#2c76d1] transition-colors">
+        <a href="#" className="block text-md hover:text-[#2c76d1] transition-colors">
           How to Buy?
         </a>
-        <a href="#" className="block text-lg hover:text-[#2c76d1] transition-colors">
+        <a href="#" className="block text-md hover:text-[#2c76d1] transition-colors">
           Contact
         </a>
       </div>

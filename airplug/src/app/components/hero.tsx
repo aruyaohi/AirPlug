@@ -16,7 +16,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative py-12 lg:py-20">
+    <section className=" mt-40 lg:mt-0 py-12 lg:py-40">
       {/* Loader */}
       {loading && (
         <div className="fixed inset-0 flex items-center justify-center bg-white bg-opacity-80 z-50">
@@ -51,7 +51,7 @@ export default function Hero() {
               <a
                 href="/connectwallet"
                 onClick={(e) => handleNavigation(e, '/connectwallet')}
-                className="py-4 px-10 lg:px-16 text-lg font-semibold text-gray-900 bg-white border  border-3 border-gray-900 rounded-lg backdrop-blur-md bg-opacity-70 hover:text-[#f1952c] hover:border hover:border-[#f1952c] transition-all duration-300 transform hover:scale-105"
+                className="py-4 px-10 lg:px-16 text-lg font-semibold text-gray-900 bg-white border  border-3 border-gray-900 rounded-lg bg-opacity-70 hover:text-[#f1952c] hover:border hover:border-[#f1952c] transition-all duration-300 transform hover:scale-105"
               >
                 Get Started
               </a>
@@ -68,9 +68,9 @@ export default function Hero() {
             <Image
               src="/images/net.png"
               alt="Crypto Airtime and Data Top-Up"
-              className="md:full rounded-xl"
-              width={100}
-              height={100}
+              className="md:full rounded-xl w-full"
+              width={200}
+              height={200}
             />
           </motion.div>
         </div>

@@ -27,7 +27,7 @@ export default function Dashboard() {
         </div>
         {/* Menu Button */}
         <button
-          className="lg:hidden p-2 border-2 border-gray-600 rounded-md focus:outline-none transition-transform"
+          className="lg:hidden p-2 border-2 border-gray-300 rounded-md focus:outline-none transition-transform"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           <svg

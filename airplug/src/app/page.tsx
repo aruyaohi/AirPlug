@@ -5,8 +5,8 @@ import Footer from "./components/footer";
 export default function Home(){
   return(
     <>
-    <div className="overflow-hidden">
-      <div className="sticky z-100">
+    <div className="">
+      <div className="sticky z-999 top-0 transition-all">
       <Header/>
       </div>
       <div className="lg:py-10 flex flex-col gap-10 lg:gap-5">

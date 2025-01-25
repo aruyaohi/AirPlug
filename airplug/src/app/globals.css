@@ -28,7 +28,7 @@ body {
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-  --background: #ffff; /* Set your image path here */
+  --background: #f6f6f6; /* Set your image path here */
   --foreground: #171717;
   --test-background: #1700182e;
   background-repeat: no-repeat; /* Prevent the background image from repeating */
