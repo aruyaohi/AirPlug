@@ -51,7 +51,7 @@ export default function Dashboard() {
       <div className="w-full border-2 rounded-md p-4 border-gray-50 flex justify-center gap-3">
         <button
           className={`border rounded-full w-1/2 py-3 flex items-center justify-center font-semibold ${
-            activeTab === "airtime" ? "bg-[#f1952c] text-white" : "bg-white border-gray-300"
+            activeTab === "airtime" ? "bg-[#1e1e1e] text-white" : "bg-white border-gray-300"
           }`}
           onClick={() => setActiveTab("airtime")}
         >
@@ -59,7 +59,7 @@ export default function Dashboard() {
         </button>
         <button
           className={`border rounded-full w-1/2 py-3 flex items-center justify-center font-semibold ${
-            activeTab === "data" ? "bg-[#f1952c] text-white" : "bg-white border-gray-300"
+            activeTab === "data" ? "bg-[#1e1e1e] text-white" : "bg-white border-gray-300"
           }`}
           onClick={() => setActiveTab("data")}
         >
@@ -80,7 +80,7 @@ export default function Dashboard() {
                 id="phone"
                 type="tel"
                 placeholder="Enter Phone Number"
-                className="w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 placeholder-gray-400"
+                className="w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 placeholder-gray-400 bg-white"
               />
             </div>
           </div>
@@ -89,7 +89,7 @@ export default function Dashboard() {
           <div>
             <label className="block text-sm font-semibold text-gray-700">Network Providers</label>
             <div className="flex justify-between items-center gap-3">
-              <button className="flex-1 py-3 border-2 border-[#f1952c] rounded-md hover:bg-[#3de25e] hover:border-none transition-all duration-300 flex items-center justify-center">
+              <button className="flex-1 py-3 border-2 border-gray-300 rounded-md hover:bg-[#3de25e] hover:border-none transition-all duration-300 flex items-center justify-center">
                 <Image src="/images/glo.png" alt="GLO" width={40} height={40} />
               </button>
               <button className="flex-1 py-3 border-2 border-gray-300 rounded-md hover:bg-yellow-500 hover:border-none  transition-all duration-300 flex items-center justify-center">
@@ -114,7 +114,7 @@ export default function Dashboard() {
                 id="amount"
                 type="number"
                 placeholder="Enter Amount"
-                className="w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 placeholder-gray-400"
+                className="w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 placeholder-gray-400 bg-white"
               />
             </div>
           </div>
@@ -134,7 +134,7 @@ export default function Dashboard() {
                 id="phone"
                 type="tel"
                 placeholder="Enter Phone Number"
-                className="w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 placeholder-gray-400"
+                className="w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 placeholder-gray-400 bg-white"
               />
             </div>
           </div>
@@ -143,7 +143,7 @@ export default function Dashboard() {
           <div>
             <label className="block text-sm font-semibold text-gray-700">Network Providers</label>
             <div className="flex justify-between items-center gap-3">
-              <button className="flex-1 py-3 border-2 border-[#f1952c] rounded-md hover:bg-[#f1952c] transition-all duration-300 flex items-center justify-center">
+              <button className="flex-1 py-3 border-2 border-gray-300 rounded-md hover:bg-[#f1952c] transition-all duration-300 flex items-center justify-center">
                 <Image src="/images/glo.png" alt="GLO" width={40} height={40} />
               </button>
               <button className="flex-1 py-3 border-2 border-gray-300 rounded-md hover:bg-blue-500 transition-all duration-300 flex items-center justify-center">
@@ -165,7 +165,7 @@ export default function Dashboard() {
             </label>
             <select
               id="plan"
-              className="w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              className="w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-[#f1952c] focus:border-[#f1952c] bg-white"
             >
               <option value="plan1">Plan 1</option>
               <option value="plan2">Plan 2</option>
@@ -182,7 +182,7 @@ export default function Dashboard() {
         </label>
         <select
           id="token"
-          className="w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+          className="w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-[#f1952c] focus:border-[#f1952c] bg-white"
         >
           <option value="usdc">USDC</option>
         </select>
@@ -190,7 +190,7 @@ export default function Dashboard() {
 
       {/* Proceed Button */}
       <div className="p-6">
-        <button className="w-full bg-[#f1952c] text-white py-3 rounded-md font-semibold">
+        <button className="w-full bg-[#1e1e1e] text-white py-3 rounded-md font-semibold">
           Proceed
         </button>
       </div>

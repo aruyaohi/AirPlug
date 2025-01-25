@@ -77,7 +77,7 @@ export default function ConnectWallet() {
           alt="Wallet Illustration"
           width={200}
           height={200}
-          className="mx-auto mb-6 rounded-full shadow-lg"
+          className="mx-auto mb-6 rounded-full"
         />
 
         {/* Heading */}
@@ -94,7 +94,7 @@ export default function ConnectWallet() {
         <div className="mt-8 w-full">
           <button
             onClick={() => open()}
-            className="flex justify-center gap-4 items-center py-3 w-full sm:px-14 font-medium text-white bg-[#f1952c] rounded-lg shadow-md hover:shadow-lg transform hover:scale-105 transition-transform duration-300"
+            className="flex justify-center gap-4 items-center py-3 w-full sm:px-14 font-medium text-white bg-[#1e1e1e] rounded-lg shadow-md hover:shadow-lg transform hover:scale-105 transition-transform duration-300"
           >
             <FaWallet size={20}/>
             Connect Wallet
