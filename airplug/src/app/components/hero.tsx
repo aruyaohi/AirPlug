@@ -51,7 +51,7 @@ export default function Hero() {
               <a
                 href="/connectwallet"
                 onClick={(e) => handleNavigation(e, '/connectwallet')}
-                className="py-4 px-10 lg:px-16 text-lg font-semibold text-gray-900 bg-white border  border-3 border-gray-900 rounded-lg bg-opacity-70 hover:text-[#f1952c] hover:border hover:border-[#f1952c] transition-all duration-300 transform hover:scale-105"
+                className="py-4 px-10 lg:px-16 text-lg font-semibold text-white bg-[#1e1e1e] border  border-3 rounded-lg hover:text-[#1e1e1e] hover:bg-transparent hover:border-2 hover:border-[#1e1e1e] transition-all duration-300 transform hover:scale-105"
               >
                 Get Started
               </a>
